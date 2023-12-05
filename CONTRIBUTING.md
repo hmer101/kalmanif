@@ -125,6 +125,13 @@ cmake -DBUILD_TESTING=ON -DBUILD_EXAMPLES=ON -DPLOT_EXAMPLES=ON ..
 cmake --build . --config Release
 ```
 
+Harvey adds: Note that in order to find_package(kalmanif) later, you will need to install kalmanif too. From the build folder:
+
+```
+sudo make install
+```
+
+
 ### Running examples/tests
 
 Examples are located in `build/examples`.
@@ -174,6 +181,7 @@ target_link_libraries(${PROJECT_NAME} INTERFACE kalmanif::kalmanif)
 # Set c++17 flag
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
 ```
+
 
 [//]: # (URLs)
 
