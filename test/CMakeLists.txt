@@ -1,6 +1,6 @@
 find_package(GTest QUIET)
 
-if(NOT GTEST_FOUND)
+#if(NOT GTEST_FOUND)
   # If not found, download it
 
   # Download and unpack googletest at configure time
@@ -27,7 +27,7 @@ if(NOT GTEST_FOUND)
   add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
                    ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
                    EXCLUDE_FROM_ALL)
-endif()
+#endif()
 
 # small helper function
 function(kalmanif_add_gtest target)
